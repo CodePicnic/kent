@@ -1,0 +1,37 @@
+{
+  "name": "kent",
+  "version": "0.0.1",
+  "description": "Simple rich text editor",
+  "main": "src/index.js",
+  "scripts": {
+    "build:js": "browserify src/index.js -o ./public/js/index.js --debug --verbose",
+    "watch:js": "watchify src/index.js -o ./public/js/index.js --debug --verbose",
+    "dist:js": "npm run build:js && uglify -s ./public/js/index.js -o ./public/js/index.js",
+    "build:css": "node_modules/.bin/node-sass ./sass/index.scss ./public/css/index.css",
+    "watch:css": "node_modules/.bin/nodemon -e scss -x \"npm run build:css\"",
+    "dist:css": "npm run build:css && uglify -s ./public/css/index.css -o ./public/css/index.css -c",
+    "start": "node_modules/.bin/parallelshell \"npm run watch:js\" \"npm run watch:css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodePicnic/kent.git"
+  },
+  "keywords": [
+    "editor"
+  ],
+  "author": "Gustavo Leon <gustavo@codepicnic.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodePicnic/kent/issues"
+  },
+  "homepage": "https://github.com/CodePicnic/kent#readme",
+  "devDependencies": {
+    "node-sass": "^3.7.0",
+    "nodemon": "^1.9.2",
+    "parallelshell": "^2.0.0",
+    "uglify": "^0.1.5"
+  },
+  "dependencies": {
+    "lodash": "^4.13.1"
+  }
+}

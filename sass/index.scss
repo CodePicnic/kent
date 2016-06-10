@@ -1,0 +1,46 @@
+.kent-editor {
+  display: block;
+  width: 720px;
+  margin: 0 auto;
+  position: relative;
+
+  * {
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .kent-content {
+    outline: none;
+    display: block;
+
+    > p {
+      display: block;
+    }
+
+    img {
+      cursor: move;
+
+      &._100 {
+        width: 900px;
+        max-width: 100%;
+        padding: 5px;
+        box-shadow: 0 0 4px #eee;
+      }
+
+      &._75 {
+        max-width: 75%;
+      }
+
+      &._50 {
+        max-width: 50%;
+      }
+
+      &._25 {
+        max-width: 25%;
+      }
+    }
+  }
+
+  @import "typography";
+  @import "toolbar";
+}

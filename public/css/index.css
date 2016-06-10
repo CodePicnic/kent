@@ -1,0 +1,81 @@
+.kent-editor {
+  display: block;
+  width: 720px;
+  margin: 0 auto;
+  position: relative; }
+  .kent-editor * {
+    box-sizing: border-box;
+    outline: none; }
+  .kent-editor .kent-content {
+    outline: none;
+    display: block; }
+    .kent-editor .kent-content > p {
+      display: block; }
+    .kent-editor .kent-content img {
+      cursor: move; }
+      .kent-editor .kent-content img._100 {
+        width: 900px;
+        max-width: 100%;
+        padding: 5px;
+        box-shadow: 0 0 4px #eee; }
+      .kent-editor .kent-content img._75 {
+        max-width: 75%; }
+      .kent-editor .kent-content img._50 {
+        max-width: 50%; }
+      .kent-editor .kent-content img._25 {
+        max-width: 25%; }
+  .kent-editor .kent-content {
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: 1.5; }
+  .kent-editor h1, .kent-editor h2, .kent-editor h3, .kent-editor h4, .kent-editor h5, .kent-editor h6 {
+    margin: 24px 0; }
+  .kent-editor p {
+    margin: 0 0 12px 0;
+    text-align: justify; }
+  .kent-editor code {
+    padding: 2px 4px;
+    font-family: "Consolas", "Menlo", "Monaco", monospace;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px; }
+  .kent-editor .kent-toolbar {
+    display: inline-block;
+    max-width: 320px;
+    height: 32px;
+    background: #111111;
+    border-radius: 4px;
+    position: fixed;
+    padding: 4px;
+    top: 0;
+    visibility: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none; }
+    .kent-editor .kent-toolbar .kent-toolbar-arrow {
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid #434a54;
+      position: absolute;
+      bottom: -6px;
+      left: calc(50% - 6px); }
+    .kent-editor .kent-toolbar button {
+      width: 24px;
+      height: 24px;
+      padding: 2px;
+      background: none;
+      border: none;
+      border-radius: 2px;
+      text-align: center; }
+      .kent-editor .kent-toolbar button:hover {
+        background: #656d78; }
+      .kent-editor .kent-toolbar button:active {
+        background: #111111; }
+      .kent-editor .kent-toolbar button img {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle; }
